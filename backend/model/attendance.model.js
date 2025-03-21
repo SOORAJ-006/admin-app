@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const AttendanceSchema = new mongoose.Schema({
   studentId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Student', // References studentSchema
+    ref: 'Students', // References studentSchema
     required: true
   },
   classId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Class', // References classSchema
+    ref: 'Classes', // References classSchema
     required: true
   },
   teacherId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // References userSchema (role: teacher)
+    ref: 'Users', // References userSchema (role: teacher)
     required: true
   },
   date: {
