@@ -7,7 +7,7 @@ const {
   updateAttendance,
   deleteAttendance,
 } = require("../controller/attendance.controller");
-const { authMiddleware, adminAuth, teacherAuth } = require("../middleware/authMiddleware");
+const { authMiddleware, adminAuth, teacherAuth } = require("../middleware/auth.middleware");
 
 // Admin & Teacher Routes
 router.get("/", authMiddleware, getAllAttendance);

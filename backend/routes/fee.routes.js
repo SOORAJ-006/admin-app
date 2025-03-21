@@ -6,8 +6,8 @@ const {
   getUnpaidFeesByStudent,
   updateFee,
   deleteFee
-} = require("../controllers/feeController");
-const { authMiddleware, adminAuth, teacherAuth } = require("../middleware/authMiddleware");
+} = require("../controller/fee.controller");
+const { authMiddleware, adminAuth, teacherAuth } = require("../middleware/auth.middleware");
 
 // Admin Routes
 router.get("/", adminAuth, getAllFees);

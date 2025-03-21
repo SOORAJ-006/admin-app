@@ -1,4 +1,4 @@
-const Fee = require("../model/fee.model");
+const Fee = require("../model/fees.model");
 const Student = require("../model/student.model");
 
 /**

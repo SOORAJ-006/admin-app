@@ -14,6 +14,9 @@ app.use(express.json());
 app.use('/api/admin', require('./routes/user.routes.js'));
 app.use('/api/class', require('./routes/class.routes.js'));
 app.use('/api/student', require('./routes/student.routes.js'));
+app.use('/api/fee', require('./routes/fee.routes.js'))
+app.use('/api/attendance', require('./routes/attendance.routes.js'))
+
 
 // app.post('/api/months', async (req, res) => {
 //     const month = "December";
