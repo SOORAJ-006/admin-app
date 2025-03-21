@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({
     phone:{
         type: Number,
         required: true,
-        unique: true
+        // unique: true
     },
     email: {
         type: String,
@@ -26,8 +26,12 @@ const userSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['admin', 'superAdmin'],
-        default: 'admin'
+        enum: ['instructor', 'admin'],
+        default: 'instructor'
+    },
+    assignedClasses:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Classes'
     },
     isActive: {
         type: Boolean,
@@ -41,4 +45,4 @@ const userSchema = mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('Users', userSchema)
